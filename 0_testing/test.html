@@ -3,11 +3,63 @@
         <title>Testing</title>
     </head>
     <body>
-        <p>Hi</p>
-        <script>
-            console.log("Hello, World!");
-            console.log("Hello, World2!");
-            // create a
+        <p id="hi">Hi</p>
+
+
+
+<script>
+
+"use strict";
+
+
+
+/*
+function my_function()
+{return new Promise( resolve=>setTimeout(()=>{console.log("Hey");},500));}
+
+
+const getUsers = (ms) => { // No need to make this async
+    return new Promise(resolve => setTimeout(()=>console.log("hey"), ms));
+};
+
+
+console.log("1");
+console.log("2");
+
+
+//await my_function();
+
+(async ()=>{
+    await getUsers(300);
+})()
+
+
+
+console.log("3");
+console.log("4");
+
+*/
+
+
+const my_function = async ()=>{
+    console.log("1");
+    console.log("2");
+    const waited = await setTimeout(()=>console.log("hey"), 400);
+    console.log(waited);
+    console.log(typeof waited);
+    console.log(typeof(setTimeout));
+    console.log(typeof(setTimeout(()=>console.log("hey"), 400)));
+    
+    console.log("3");
+    console.log("4");
+}
+
+
+
+my_function();
+
+
+
         </script>
     </body>
 </html>
